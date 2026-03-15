@@ -1,4 +1,4 @@
-// --- Bom dia ---
+// --- Bom dia, Boa tarde e Boa noite ---
 var agora = new Date();
 var hora = agora.getHours();
 var campoMensagem = document.getElementById('mensagem');
@@ -113,7 +113,6 @@ function adicionarProjeto() {
     // Pede a imagem
     let urlImagem = prompt("Cole a URL (link) da imagem do projeto.\n(Deixe em branco se não quiser imagem):");
 
-    // Se o usuário digitou uma URL, cria a tag de imagem. Se não, deixa vazio.
     let tagImagemHTML = urlImagem ? `<img src="${urlImagem}" class="card-img-top" alt="Imagem do Projeto">` : '';
 
     let div = document.createElement('div');
@@ -143,19 +142,21 @@ function editarContatos() {
     let linkIn = document.getElementById('link-linkedin');
     let linkMail = document.getElementById('link-email');
 
+    // GitHub
     let novoGit = prompt("Cole o seu link do GitHub:", linkGit.href);
     if (novoGit !== null) linkGit.href = novoGit;
 
+    // Linkedin
     let novoIn = prompt("Cole o seu link do LinkedIn:", linkIn.href);
     if (novoIn !== null) linkIn.href = novoIn;
 
-    // No email, limpa o 'mailto:' da tela para ficar mais fácil de editar
+    // Email
     let emailAtual = linkMail.href.replace('mailto:', '');
     let novoMail = prompt("Digite o seu endereço de E-mail:", emailAtual);
     if (novoMail !== null) linkMail.href = 'mailto:' + novoMail;
 }
 
-// --- Funções de salvar dados ---
+// --- Função de salvar dados ---
 function salvarTudoNoNavegador() {
     let conteudoPrincipal = document.querySelector('main').innerHTML;
     localStorage.setItem('meu_portfolio_salvo', conteudoPrincipal);
@@ -178,5 +179,5 @@ function carregarDadosSalvos() {
     }
 }
 
-// Executa o carregamento dos dados salvos
+// Carrega os dados salvos
 carregarDadosSalvos();  

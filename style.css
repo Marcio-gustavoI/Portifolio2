@@ -6,23 +6,30 @@ body {
     background-color: #333333;
 }
 
-/* Estilização da Foto de Perfil */
 .foto-perfil {
-    width: 250px; /* Aumentamos de 180px para 250px */
-    height: 250px; /* Aumentamos de 180px para 250px */
+    width: 250px; 
+    height: 250px;
     object-fit: cover;
-    margin-bottom: 0.5rem; /* Reduzimos o espaço entre a foto e o texto */
+    margin-bottom: 0.5rem; 
     border: 4px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Apresentação */
-/* Ajuste do Card da seção Início */
+
 .hero-section .card {
-    max-width: 800px; /* Limita a largura do card para ele não esticar demais */
+    max-width: 800px; 
     width: 100%;
-    margin: 0 auto; /* Centraliza o card na tela */
-    text-align: center; /* Centraliza todo o texto dentro dele */
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.navbar-custom .nav-link {
+    transition: all 0.3s ease; 
+    border-radius: 8px;
+}
+
+.navbar-custom .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.185); 
 }
 
 .container .card {
@@ -46,29 +53,15 @@ body {
     transform: translateY(-3px);
 }
 
-/* Ródapé */
 footer .social-icon {
     color: rgb(255, 255, 255);
     transition: all 0.3s ease;
 }
 
-/* Esconde os botões de edição por padrão */
 .admin-only {
     display: none !important;
 }
 
-/* Quando logado, mostra os botões */
 body.admin-mode .admin-only {
     display: inline-block !important;
-}
-
-/* Um botãozinho de login discreto no rodapé */
-#btn-login {
-    background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.1); /* Opacidade ajustada conforme estava no HTML */
-    font-size: 0.8rem;
-    cursor: pointer;
-    padding: 0;             /* Espaçamento zerado, trazido do HTML */
-    margin-left: 10px;      /* Margem à esquerda, trazida do HTML */
 }
