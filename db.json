@@ -1,0 +1,126 @@
+{
+  "perfil": [
+    {
+      "id": "1",
+      "nome": "Márcio Gustavo Inocêncio",
+      "titulo": "Programador Full Stack",
+      "email": "marcio.gustavvo@gmail.com",
+      "whatsapp": "",
+      "biografia": "Sou formado em Técnico de Desenvolvimento de Sistemas e atualmente curso Desenvolvimento de Software Multiplataforma na FATEC. Enxergo a programação como um horizonte de possibilidades e fonte de inovação. Busco evoluir como desenvolvedor, criando soluções úteis, organizadas e acessíveis.",
+      "foto": "img/perfil-github.png"
+    }
+  ],
+  "formacao": [
+    {
+      "id": "1",
+      "curso": "Desenvolvimento de Software Multiplataforma",
+      "instituicao": "FATEC",
+      "periodo": "2025 - Cursando",
+      "descricao": "Curso superior focado em criar soluções de software para diversas plataformas."
+    },
+    {
+      "id": "2",
+      "curso": "Técnico em Desenvolvimento de Sistemas",
+      "instituicao": "ETEC",
+      "periodo": "2023 - 2024",
+      "descricao": "Formação técnica que abordou lógica de programação, banco de dados e desenvolvimento de aplicações web e mobile."
+    }
+  ],
+  "certificados": [
+    {
+      "id": "1",
+      "nome": "Desenvolvimento WEB - Front End (Javascript)",
+      "instituicao": "SENAC",
+      "cargaHoraria": "Não informado",
+      "ano": 2025
+    },
+    {
+      "id": "2",
+      "nome": "Desenvolvedor de Aplicações para Android",
+      "instituicao": "SENAI",
+      "cargaHoraria": "Não informado",
+      "ano": 2025
+    },
+    {
+      "id": "3",
+      "nome": "Administração I - SQL Server",
+      "instituicao": "SENAC",
+      "cargaHoraria": "Não informado",
+      "ano": 2025
+    },
+    {
+      "id": "4",
+      "nome": "Escola de Inovadores",
+      "instituicao": "INOVA CPS",
+      "cargaHoraria": "Não informado",
+      "ano": 2025
+    }
+  ],
+  "projetos": [
+    {
+      "id": "1",
+      "nome": "Urban Store - Atualizado",
+      "descricao": "Projeto atualizado usando requisição PUT no Postman.",
+      "tecnologias": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript"
+      ],
+      "link": "https://urbans-phi.vercel.app/"
+    },
+    {
+      "id": "9LHaXQ33GxA"
+    },
+    {
+      "id": "Rxjmt1w58og"
+    },
+    {
+      "id": "ZHSNXzOniU0"
+    },
+    {
+      "nome": "Projeto Teste Postman",
+      "descricao": "Projeto criado usando requisição POST no Postman.",
+      "tecnologias": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "link": "https://github.com/Marcio-gustavoI",
+      "id": "QdwJyqUCHmI"
+    }
+  ],
+  "habilidades": [
+    {
+      "id": "1",
+      "tipo": "Técnica",
+      "nome": "Front-end",
+      "descricao": "HTML5, CSS3, Bootstrap e JavaScript"
+    },
+    {
+      "id": "2",
+      "tipo": "Técnica",
+      "nome": "Back-end",
+      "descricao": "Python Flask, SQL Server e Node.js"
+    },
+    {
+      "id": "3",
+      "tipo": "Interpessoal",
+      "nome": "Trabalho em equipe",
+      "descricao": "Colaboração, comunicação e organização"
+    }
+  ],
+  "links": [
+    {
+      "id": "1",
+      "tipo": "GitHub",
+      "url": "https://github.com/Marcio-gustavoI"
+    },
+    {
+      "id": "2",
+      "tipo": "LinkedIn",
+      "url": "https://www.linkedin.com/in/marciogustavo/"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
