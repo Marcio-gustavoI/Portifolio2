@@ -167,17 +167,39 @@ function salvarTudoNoNavegador() {
     alert("Suas alterações foram salvas neste navegador!");
 }
 
-function carregarDadosSalvos() {
-    let conteudoSalvo = localStorage.getItem('meu_portfolio_salvo');
-    let contatosSalvos = localStorage.getItem('meu_portfolio_contatos');
+// --- Nova função para buscar do Banco de Dados ---
+async function carregarProjetosDoBanco() {
+    try {
+        // Faz o GET na sua API que está rodando no server.js
+        const resposta = await fetch('http://localhost:3000/projetos');
+        const projetos = await resposta.json();
 
-    if (conteudoSalvo) {
-        document.querySelector('main').innerHTML = conteudoSalvo;
-    }
-    if (contatosSalvos) {
-        document.getElementById('contato').innerHTML = contatosSalvos;
+        const listaProjetos = document.getElementById('lista-projetos');
+        listaProjetos.innerHTML = ''; // Limpa os projetos antigos do HTML
+
+        // Cria os cards dinamicamente com os dados que vieram do banco
+        projetos.forEach(projeto => {
+            // Transforma o array de tecnologias em badges do Bootstrap
+            let tagsHTML = projeto.tecnologias.map(tec => `<span class="badge bg-primary me-1 mb-1">${tec}</span>`).join('');
+
+            listaProjetos.innerHTML += `
+                <div class="col-lg-5 col-md-6 mb-4 position-relative projeto-card">
+                    <a href="${projeto.link}" target="_blank" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm bg-dark text-light border-success">
+                            <div class="card-body mt-4">
+                                <h5 class="card-title titulo-projeto">${projeto.nome}</h5>
+                                <p class="card-text text-white">${projeto.descricao}</p>
+                                <div class="mt-auto">${tagsHTML}</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `;
+        });
+    } catch (erro) {
+        console.error("Erro ao carregar projetos da API:", erro);
     }
 }
 
-// Carrega os dados salvos
-carregarDadosSalvos();  
+// Chama a função assim que o site abrir
+carregarProjetosDoBanco();
