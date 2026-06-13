@@ -65,8 +65,8 @@
                         </div>
                     </div>
                     <div>
-                        <a href="Marcio-Currículo.pdf" download="Marcio_Curriculo.pdf"
-                            class="btn btn-primary btn-lg mt-3" role="button">
+                        <a href="Marcio_Curriculo.pdf" download="Marcio_Curriculo.pdf"
+                            class="btn btn-primary btn-lg mt-3" role="button" target="_blank">
                             Baixar Currículo
                         </a>
                         <button class="btn btn-warning btn-lg mt-3 ms-2 admin-only" onclick="editarPerfilCompleto()"><i
@@ -118,6 +118,18 @@
                 <div class="col-lg-6">
                     <div class="p-4 shadow-sm rounded-3 h-100 bg-white" id="lista-certificados">
                         <h3 class="mb-4 text-primary"><i class="fas fa-certificate me-2"></i> Certificados</h3>
+
+                        <div class="mb-4 position-relative item-curriculo">
+                            <h4><span class="titulo-item">Fundamentos de IA generativa (AWS)</span>
+                                <button class="btn btn-sm btn-outline-warning admin-only ms-2"
+                                    onclick="editarCurriculo(this)"><i class="fas fa-pen"></i></button>
+                                <button class="btn btn-sm btn-outline-danger admin-only ms-1"
+                                    onclick="deletarItem(this, '.item-curriculo')"><i class="fas fa-trash"></i></button>
+                            </h4>
+                            <p class="fw-bold mb-1">Amazon Web Services (AWS) - (2026)</p>
+                            <p class="text-muted small">Curso focado nos fundamentos de Inteligência Artificial
+                                Generativa e seus casos de uso.</p>
+                        </div>
 
                         <div class="mb-4 position-relative item-curriculo">
                             <h4><span class="titulo-item">Desenvolvimento WEB - Front End (Javascript)</span>
@@ -176,64 +188,7 @@
                         class="fas fa-plus"></i> Novo Projeto</button>
             </h1>
             <div class="row justify-content-center gap-5 text-bg-light rounded-5 p-5" id="lista-projetos">
-
-                <div class="col-lg-5 mb-4 position-relative projeto-card">
-                    <a href="https://urbans-phi.vercel.app/" target="_blank" class="text-decoration-none">
-                        <div class="card h-100 shadow-sm bg-dark text-light">
-                            <img src="/img/Projeto1.png" class="card-img-top" alt="Imagem do Projeto Urban Store">
-                            <div class="card-body">
-                                <p class="small text-white opacity-75">Site sobre urbanismo e desigualdade social.</p>
-                                <h5 class="card-title titulo-projeto">Urban Store</h5>
-                                <p class="card-text text-white">Feito inteiramente por mim.</p>
-                                <div class="mt-auto">
-                                    <span class="badge bg-primary me-1 mb-1">HTML</span>
-                                    <span class="badge bg-secondary me-1 mb-1">CSS</span>
-                                    <span class="badge bg-success me-1 mb-1">Bootstrap</span>
-                                    <span class="badge bg-info me-1 mb-1">Git</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="admin-only position-absolute top-0 end-0 p-2 z-3">
-                        <button class="btn btn-warning btn-sm shadow" onclick="editarProjeto(this)"><i
-                                class="fas fa-pen"></i></button>
-                        <button class="btn btn-danger btn-sm shadow" onclick="deletarItem(this, '.projeto-card')"><i
-                                class="fas fa-trash"></i></button>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-md-6 mb-4 position-relative projeto-card">
-                    <a href="https://api-censo-2022.vercel.app/" target="_blank" class="text-decoration-none">
-                        <div class="card h-100 shadow-sm bg-dark text-light">
-                            <img src="img/Projeto3.png" class="card-img-top" alt="Imagem do Projeto de Planeja SJC">
-                            <div class="card-body">
-                                <p class="small text-white">Site relatório de dados em gráficos sobre censo de São José
-                                    dos Campos.</p>
-                                <h5 class="card-title titulo-projeto">Planeja SJC</h5>
-                                <p class="card-text text-white">Neste projeto, fui responsável pelo design visual e pelo
-                                    desenvolvimento do front-end e migração do site para o framework Flask.</p>
-                                <div class="mt-auto">
-                                    <span class="badge bg-primary me-1 mb-1">HTML</span>
-                                    <span class="badge bg-secondary me-1 mb-1">CSS</span>
-                                    <span class="badge bg-info text-dark me-1 mb-1">JavaScript</span>
-                                    <span class="badge bg-success me-1 mb-1">Bootstrap</span>
-                                    <span class="badge bg-info text-dark me-1 mb-1">Tailwind</span>
-                                    <span class="badge bg-warning text-dark me-1 mb-1">Python</span>
-                                    <span class="badge bg-light text-dark me-1 mb-1">Flask</span>
-                                    <span class="badge bg-secondary me-1 mb-1">Git</span>
-                                    <span class="badge bg-danger me-1 mb-1">Figma</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="admin-only position-absolute top-0 end-0 p-2 z-3">
-                        <button class="btn btn-warning btn-sm shadow" onclick="editarProjeto(this)"><i
-                                class="fas fa-pen"></i></button>
-                        <button class="btn btn-danger btn-sm shadow" onclick="deletarItem(this, '.projeto-card')"><i
-                                class="fas fa-trash"></i></button>
-                    </div>
-                </div>
-
+                <!-- Cards gerados dinamicamente pelo script.js -->
             </div>
         </section>
 
@@ -250,7 +205,7 @@
                     <ul class="list-unstyled" id="lista-hard-skills">
                         <li class="mb-3 d-flex align-items-center">
                             <i class="fas fa-check text-primary me-3"></i><span><strong>Front-end:</strong> HTML5, CSS3,
-                                Bootstrap, JavaScript.</span>
+                                Bootstrap, JavaScript, React, Tailwind.</span>
                             <button class="btn btn-sm btn-outline-warning admin-only ms-auto"
                                 onclick="editarHabilidade(this)"><i class="fas fa-pen"></i></button>
                             <button class="btn btn-sm btn-outline-danger admin-only ms-1"
@@ -258,7 +213,7 @@
                         </li>
                         <li class="mb-3 d-flex align-items-center">
                             <i class="fas fa-check text-primary me-3"></i><span><strong>Back-end:</strong> Python
-                                (Flask), SQL Server, Node.js.</span>
+                                (Flask), Node.js, TypeScript.</span>
                             <button class="btn btn-sm btn-outline-warning admin-only ms-auto"
                                 onclick="editarHabilidade(this)"><i class="fas fa-pen"></i></button>
                             <button class="btn btn-sm btn-outline-danger admin-only ms-1"
@@ -266,7 +221,7 @@
                         </li>
                         <li class="mb-3 d-flex align-items-center">
                             <i class="fas fa-check text-primary me-3"></i><span><strong>Banco de Dados:</strong> MySQL,
-                                SQL Server</span>
+                                SQL Server, Prisma ORM.</span>
                             <button class="btn btn-sm btn-outline-warning admin-only ms-auto"
                                 onclick="editarHabilidade(this)"><i class="fas fa-pen"></i></button>
                             <button class="btn btn-sm btn-outline-danger admin-only ms-1"
@@ -282,7 +237,7 @@
                         </li>
                         <li class="mb-3 d-flex align-items-center">
                             <i class="fas fa-check text-primary me-3"></i><span><strong>Ferramentas:</strong> Git,
-                                GitHub, AWS, Docker</span>
+                                GitHub, Figma, Postman, Notion.</span>
                             <button class="btn btn-sm btn-outline-warning admin-only ms-auto"
                                 onclick="editarHabilidade(this)"><i class="fas fa-pen"></i></button>
                             <button class="btn btn-sm btn-outline-danger admin-only ms-1"
